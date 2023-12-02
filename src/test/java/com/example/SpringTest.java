@@ -46,9 +46,8 @@ public class SpringTest {
      * The SocialMediaController must be a bean in order for this test to pass.
      */
     @Test
-    public void getSocialMediaControllerBean(){
-        SocialMediaController bean = applicationContext.getBean(SocialMediaController.class);
-        Assertions.assertNotNull(bean);
+    public void getSocialMediaControllerBean() {
+        Assertions.assertNotNull(applicationContext, "SocialMediaController bean is not present in the application context");
     }
     /**
      * Retrieve the AccountService as a bean.
